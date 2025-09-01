@@ -1,21 +1,43 @@
 ---
-import * as Plot from "@observablehq/plot";
-import PlotFigure from "../components/PlotFigure.astro";
-import penguins from "../assets/penguins.json";
+
 ---
 
-<h1>Penguins dataset</h1>
-
-<PlotFigure
-	options={{
-		marks: [
-			Plot.dot(penguins, {
-				x: "culmen_length_mm",
-				y: "culmen_depth_mm",
-				fill: "species",
-			}),
-		],
-		x: { label: "Culmen length (mm)" },
-		y: { label: "Culmen depth (mm)" },
-	}}
-/>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Graphiques</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 2rem;
+				text-align: center;
+			}
+			h1 {
+				color: #333;
+				margin-bottom: 2rem;
+			}
+			.links {
+				display: flex;
+				justify-content: center;
+				gap: 1.5rem;
+			}
+			a {
+				display: inline-block;
+				padding: 0.8rem 1.2rem;
+				background: #2c1e4a;
+				color: white;
+				border-radius: 8px;
+				text-decoration: none;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Graphiques</h1>
+		<div class="links">
+			<a href="/penguins">Penguins</a>
+			<a href="/olympians">Olympians</a>
+		</div>
+	</body>
+</html>
